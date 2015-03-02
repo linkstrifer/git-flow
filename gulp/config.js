@@ -1,16 +1,18 @@
+var nib = require('nib');
+
 var config = {
 	paths: {
-		base: './site/',
-		sass: './site/static/sass/',
-		stylus: './site/static/stylus/',
-		styles: './site/static/css/'
+		base: './',
+		sass: './static/sass/',
+		stylus: './static/stylus/',
+		styles: './static/css/'
 	},
 	server: {
 		dev: {
             server: {
             	// Array with all the static folders to serve
                 baseDir: [
-                    './site/'
+                    './'
                 ],
                 // List with the url and folders to serve, like node_modules or bower folder
                 // i.e: route /node_modules url to node_modules folder
@@ -28,7 +30,7 @@ var config = {
         includePaths: []
     },
     stylus: {
-		use: 'nib',
+		use: nib,
 		compress: true
     },
     unusedCss: {
