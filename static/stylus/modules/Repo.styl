@@ -1,0 +1,42 @@
+.Repo
+	background-color black
+	border-radius 50%
+	display inline-block
+	height 50px
+	width 50px
+	position relative
+	&:before
+		background-color rgba(white, 50%)
+		border-radius 50%
+		content ''
+		display block
+		height 20px
+		left 50%
+		position absolute
+		top 50%
+		transform translate(-50%, -50%)
+		width 20px
+.Repo--dev
+	@extends .Repo
+	background-color #9b59b6
+.Repo--master
+	@extends .Repo
+	background-color #2ecc71
+.Repo--feature
+	@extends .Repo
+	background-color #f1c40f
+.Repo--hotfix
+	@extends .Repo
+	background-color #e74c3c
+.Repo--release
+	@extends .Repo
+	background-color #d35400
+.Repo--git
+	@extends .Repo
+	background-color #ecf0f1
+	height 100px
+	width 100px
+	&:before
+		background-color rgba(black, 10%)
+		height 40px
+		width 40px
