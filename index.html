@@ -28,7 +28,7 @@
 					/>
 				</svg>
 
-				<svg id="master" x="100" y="100" width="100" height="200" opacity="0">
+				<svg id="master" x="100" y="200" width="100" height="200" opacity="0">
 					<line id="branch-dev1" x1="50" y1="50" x2="100" y2="100" stroke="#747572" stroke-width="10" opacity="0"/>
 					<line id="branch-dev2" x1="50" y1="50" x2="0" y2="100" stroke="#747572" stroke-width="10" opacity="0"/>
 					<circle id="master-body" r="25" cx="50" cy="50" fill="#ecf0f1" />
@@ -44,6 +44,24 @@
 						repeatCount="indefinite"
 						values="18; 10; 18"
 						xlink:href="#master-center"
+					/>
+				</svg>
+
+				<svg id="master-dev1" x="100" y="300" width="100" height="200" opacity="0">
+					<line id="branch-merge-dev1" x1="0" y1="0" x2="50" y2="50" stroke="#747572" stroke-width="10" opacity="0"/>
+					<circle id="master-dev1-body" r="25" cx="50" cy="50" fill="#ecf0f1" />
+					<circle id="master-dev1-center" r="10" cx="50" cy="50" fill="rgba(0,0,0,.1)" />
+					<animate
+						attributeName="r"
+						begin="0"
+						calcMode="spline"
+						dur="2s"
+						fill="freeze"
+						id="git-center-anim1"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						repeatCount="indefinite"
+						values="18; 10; 18"
+						xlink:href="#master-dev1-center"
 					/>
 				</svg>
 
@@ -244,6 +262,58 @@
 						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
 						to="1"
 						xlink:href="#branch-dev2"
+					/>
+				</g>
+				<g id="step-3">
+
+					<!-- master-dev1 -->
+					<animate
+						attributeName="y"
+						begin="indefinite"
+						calcMode="spline"
+						dur="200ms"
+						fill="freeze"
+						from="200"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						to="300"
+						xlink:href="#master-dev1"
+					/>
+					<animate
+						attributeName="opacity"
+						begin="indefinite"
+						calcMode="spline"
+						dur="200ms"
+						fill="freeze"
+						from="0"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						to="1"
+						xlink:href="#master-dev1"
+					/>
+
+					<!-- branch merge dev1 -->
+					<animate
+						attributeName="opacity"
+						begin="indefinite"
+						calcMode="spline"
+						dur="200ms"
+						fill="freeze"
+						from="0"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						to="1"
+						xlink:href="#branch-merge-dev1"
+					/>
+
+					<!-- branch master -->
+					<animate
+						attributeName="y2"
+						begin="indefinite"
+						calcMode="spline"
+						dur="200ms"
+						fill="freeze"
+						from="150"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						to="250"
+						xlink:href="#branch-master"
 					/>
 				</g>
 			</svg>
