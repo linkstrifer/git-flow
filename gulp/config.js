@@ -5,7 +5,8 @@ var config = {
 		base: './',
 		sass: './static/sass/',
 		stylus: './static/stylus/',
-		styles: './static/css/'
+		styles: './static/css/',
+        scripts: './static/js/'
 	},
 	server: {
 		dev: {

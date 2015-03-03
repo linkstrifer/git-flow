@@ -9,5 +9,5 @@ gulp.task('dev', [
 		// gulp.watch(paths.base + '**/*.scss', ['sass']);
 		gulp.watch(paths.stylus + '**/*.styl', ['stylus']);
 		gulp.watch(paths.base + '**/*.html', ['html']);
-		//gulp.watch(paths.base + '**/*.js', ['js']);
+		gulp.watch(paths.scripts + '**/*.js', ['js']);
 });
