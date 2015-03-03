@@ -9,14 +9,95 @@
 <body>
 	<section class="Section">
 		<div class="Section-wrapper">
-			<h1 class="Section-titleH1">Git Flow</h1>
+			<svg>
+				<svg id="git" x="100" y="100" width="100%" height="100%" opacity="0">
+					<rect id="branch-master" x="45" y="0" width="10" height="150" fill="#747572" stroke="10" stroke-width="10" opacity="0"/>
+					<circle id="git-body" r="50" cx="50" cy="50" fill="#ecf0f1" />
+					<circle id="git-center" r="20" cx="50" cy="50" fill="rgba(0,0,0,.1)" />
+					<animate
+						attributeName="r"
+						begin="0"
+						calcMode="spline"
+						dur="2s"
+						fill="freeze"
+						id="git-center-anim1"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						repeatCount="indefinite"
+						values="20; 25; 20"
+						xlink:href="#git-center"
+					/>
+				</svg>
+
+				<svg id="master" x="100" y="100" width="100" height="200" opacity="0">
+					<circle id="master-body" r="25" cx="50" cy="50" fill="#ecf0f1" />
+					<circle id="master-center" r="10" cx="50" cy="50" fill="rgba(0,0,0,.1)" />
+					<animate
+						attributeName="r"
+						begin="0"
+						calcMode="spline"
+						dur="2s"
+						fill="freeze"
+						id="git-center-anim1"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						repeatCount="indefinite"
+						values="18; 10; 18"
+						xlink:href="#master-center"
+					/>
+				</svg>
+
+				<!-- steps -->
+
+				<animate id="step-0"
+						attributeName="opacity"
+						begin="indefinite"
+						calcMode="spline"
+						dur="200ms"
+						fill="freeze"
+						from="0"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						to="1"
+						xlink:href="#git"
+					/>
+				<g id="step-1">
+					<animate
+						attributeName="opacity"
+						begin="indefinite"
+						calcMode="spline"
+						dur="200ms"
+						fill="freeze"
+						from="0"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						to="1"
+						xlink:href="#branch-master"
+					/>
+					<animate
+						attributeName="y"
+						begin="indefinite"
+						calcMode="spline"
+						dur="200ms"
+						fill="freeze"
+						from="100"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						to="200"
+						xlink:href="#master"
+					/>
+					<animate
+						attributeName="opacity"
+						begin="indefinite"
+						calcMode="spline"
+						dur="200ms"
+						fill="freeze"
+						from="0"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						to="1"
+						xlink:href="#master"
+					/>
+				</g>
+				<g id="step-2">
+					
+				</g>
+			</svg>
 		</div>
-	</section>
-	<section class="Section is-animated Section--1">
-		<i class="Repo--git"></i>
-		<i class="icon-user user-1"></i>
-		<i class="icon-user user-2"></i>
-		<i class="icon-user user-3"></i>
 	</section>
 	<!-- <i class="icon-user"></i>
 	<i class="icon-file"></i>
@@ -27,13 +108,6 @@
 	<i class="Repo--hotfix"></i>
 	<i class="Repo--release"></i> -->
 	<!-- scripts -->
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.14/jquery.scrollTo.min.js"></script>
-	<script src="static/js/jquery.superscrollorama.js"></script>
-	<script src="static/js/TweenMax.min.js"></script>
-	<script src="static/js/TweenLite.min.js"></script>
-	<script src="static/js/TimelineLite.min.js"></script>
-	<script src="static/js/animations.js"></script>
 	<script src="static/js/slideController.js"></script>
 	<script>WebFontConfig={google:{families:["Open+Sans:400,300,700:latin"]}},function(){var t=document.createElement("script");t.src=("https:"==document.location.protocol?"https":"http")+"://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js",t.type="text/javascript",t.async="true";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();</script>
 </body>

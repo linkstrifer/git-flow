@@ -1,33 +1,40 @@
+'use strict';
+
 var temp_id = 0;
+var $ = function(query) {
+	return document.querySelector(query);
+};
 
 ////
 
-function addIDs() {
-	$('.Section').each(function() {
-		$(this).attr('id', temp_id);
-		temp_id++;
-	});
-	$($('.Section')[0]).addClass('is-active');
-}
-
 function nextSlide() {
-	$.scrollTo({
-		top: '+=100px'
-	}, 1000);
+	animate($('#step-' + temp_id))
+	temp_id++;
 }
 
-$(document).ready(function() {
-	addIDs();
-	
-});
+function prevSlide() {
+	if(temp_id > 0) {
+		temp_id--;
+	}
+	$('#step-' + temp_id).beginElement();
+}
 
-$('body').keydown(function(event) {
-	if(event.which == 39 || event.which == 38) {
-		event.preventDefault();
+function keyPress(event) {
+	if(event.keyCode == 39 || event.keyCode == 40) {
 		nextSlide();
+	} else if(event.keyCode == 38 || event.keyCode == 37) {
+		prevSlide();
 	}
-	else if(event.which == 37 || event.which == 40) {
-		event.preventDefault();
-		nextSlide();
+}
+
+function animate(element) {
+	if(element.childElementCount) {
+		for(var i = 0; i < element.childElementCount; i++) {
+			element.children[i].beginElement();
+		}
+	} else {
+		element.beginElement();
 	}
-});
+}
+
+window.addEventListener('keydown', keyPress)
