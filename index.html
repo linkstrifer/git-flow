@@ -10,8 +10,9 @@
 	<section class="Section">
 		<div class="Section-wrapper">
 			<svg>
+
+				<!-- git -->
 				<svg id="git" x="100" y="100" width="100%" height="100%" opacity="0">
-					<line id="branch-master" x1="50" y1="0" x2="50" y2="150" stroke="#747572" stroke-width="10" opacity="0"/>
 					<circle id="git-body" r="50" cx="50" cy="50" fill="#ecf0f1" />
 					<circle id="git-center" r="20" cx="50" cy="50" fill="rgba(0,0,0,.1)" />
 					<animate
@@ -28,9 +29,9 @@
 					/>
 				</svg>
 
+				<!-- master -->
 				<svg id="master" x="100" y="200" width="100" height="200" opacity="0">
-					<line id="branch-dev1" x1="50" y1="50" x2="100" y2="100" stroke="#747572" stroke-width="10" opacity="0"/>
-					<line id="branch-dev2" x1="50" y1="50" x2="0" y2="100" stroke="#747572" stroke-width="10" opacity="0"/>
+					<line x1="50" y1="0" x2="50" y2="50" stroke="#747572" stroke-width="10" opacity="1"/>
 					<circle id="master-body" r="25" cx="50" cy="50" fill="#ecf0f1" />
 					<circle id="master-center" r="10" cx="50" cy="50" fill="rgba(0,0,0,.1)" />
 					<animate
@@ -47,25 +48,9 @@
 					/>
 				</svg>
 
-				<svg id="master-dev1" x="100" y="300" width="100" height="200" opacity="0">
-					<line id="branch-merge-dev1" x1="0" y1="0" x2="50" y2="50" stroke="#747572" stroke-width="10" opacity="0"/>
-					<circle id="master-dev1-body" r="25" cx="50" cy="50" fill="#ecf0f1" />
-					<circle id="master-dev1-center" r="10" cx="50" cy="50" fill="rgba(0,0,0,.1)" />
-					<animate
-						attributeName="r"
-						begin="0"
-						calcMode="spline"
-						dur="2s"
-						fill="freeze"
-						id="git-center-anim1"
-						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
-						repeatCount="indefinite"
-						values="18; 10; 18"
-						xlink:href="#master-dev1-center"
-					/>
-				</svg>
-
-				<svg id="dev1" x="100" y="200" width="100" height="200" opacity="0">
+				<!-- dev1 -->
+				<svg id="dev1" x="50" y="250" width="100" height="200" opacity="0">
+					<line x1="50" y1="50" x2="82" y2="18" stroke="#747572" stroke-width="10" opacity="1"/>
 					<circle id="dev1-body" r="25" cx="50" cy="50" fill="#ecf0f1" />
 					<circle id="dev1-center" r="10" cx="50" cy="50" fill="rgba(0,0,0,.1)" />
 					<animate
@@ -82,7 +67,9 @@
 					/>
 				</svg>
 
-				<svg id="dev2" x="100" y="200" width="100" height="200" opacity="0">
+				<!-- dev2 -->
+				<svg id="dev2" x="150" y="250" width="100" height="200" opacity="0">
+					<line x1="18" y1="18" x2="50" y2="50" stroke="#747572" stroke-width="10" opacity="1"/>
 					<circle id="dev2-body" r="25" cx="50" cy="50" fill="#ecf0f1" />
 					<circle id="dev2-center" r="10" cx="50" cy="50" fill="rgba(0,0,0,.1)" />
 					<animate
@@ -96,6 +83,64 @@
 						repeatCount="indefinite"
 						values="18; 10; 18"
 						xlink:href="#dev2-center"
+					/>
+				</svg>
+
+				<!-- master-dev1 -->
+				<svg id="master-dev1" x="100" y="300" width="200" height="200" opacity="0">
+					
+					<line x1="17" y1="17" x2="50" y2="50" stroke="#747572" stroke-width="10" opacity="1"/>
+					<circle id="master-dev1-body" r="25" cx="50" cy="50" fill="#ecf0f1" />
+					<circle id="master-dev1-center" r="10" cx="50" cy="50" fill="rgba(0,0,0,.1)" />
+					
+					<line x1="100" y1="25" x2="100" y2="100" stroke="#747572" stroke-width="10" opacity="1"/>
+					<circle id="dev2-dev2-body" r="25" cx="100" cy="100" fill="#ecf0f1" />
+					<circle id="dev2-dev2-center" r="10" cx="100" cy="100" fill="rgba(0,0,0,.1)" />
+					
+					<animate
+						attributeName="r"
+						begin="0"
+						calcMode="spline"
+						dur="2s"
+						fill="freeze"
+						id="git-center-anim1"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						repeatCount="indefinite"
+						values="18; 10; 18"
+						xlink:href="#master-dev1-center"
+					/>
+				</svg>
+
+
+				<!-- master-dev1 -->
+				<svg id="master-dev2" x="100" y="325" width="125" height="200" opacity="0">
+					<line x1="50" y1="50" x2="50" y2="100" stroke="#747572" stroke-width="10" opacity="1"/>
+					<line x1="83" y1="93" x2="50" y2="125" stroke="#747572" stroke-width="10" opacity="1"/>
+					<circle id="master-dev2-body" r="25" cx="50" cy="125" fill="#ecf0f1" />
+					<circle id="master-dev2-center" r="10" cx="50" cy="125" fill="rgba(0,0,0,.1)" />
+					<animate
+						attributeName="r"
+						begin="0"
+						calcMode="spline"
+						dur="2s"
+						fill="freeze"
+						id="git-center-anim1"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						repeatCount="indefinite"
+						values="18; 10; 18"
+						xlink:href="#master-dev2-center"
+					/>
+					<animate
+						attributeName="r"
+						begin="0"
+						calcMode="spline"
+						dur="2s"
+						fill="freeze"
+						id="git-center-anim1"
+						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
+						repeatCount="indefinite"
+						values="18; 10; 18"
+						xlink:href="#dev2-dev2-center"
 					/>
 				</svg>
 
@@ -120,17 +165,6 @@
 					
 					<!-- master -->
 					<animate
-						attributeName="y"
-						begin="indefinite"
-						calcMode="spline"
-						dur="200ms"
-						fill="freeze"
-						from="100"
-						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
-						to="200"
-						xlink:href="#master"
-					/>
-					<animate
 						attributeName="opacity"
 						begin="indefinite"
 						calcMode="spline"
@@ -140,58 +174,12 @@
 						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
 						to="1"
 						xlink:href="#master"
-					/>
-
-					<!-- branch master -->
-					<animate
-						attributeName="opacity"
-						begin="indefinite"
-						calcMode="spline"
-						dur="200ms"
-						fill="freeze"
-						from="0"
-						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
-						to="1"
-						xlink:href="#branch-master"
-					/>
-					<animate
-						attributeName="y2"
-						begin="indefinite"
-						calcMode="spline"
-						dur="200ms"
-						fill="freeze"
-						from="0"
-						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
-						to="150"
-						xlink:href="#branch-master"
 					/>
 				</g>
 				<g id="step-2">
 
 					<!-- dev1 -->
 					<animate
-						attributeName="y"
-						begin="indefinite"
-						calcMode="spline"
-						dur="200ms"
-						fill="freeze"
-						from="200"
-						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
-						to="250"
-						xlink:href="#dev1"
-					/>
-					<animate
-						attributeName="x"
-						begin="indefinite"
-						calcMode="spline"
-						dur="200ms"
-						fill="freeze"
-						from="100"
-						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
-						to="50"
-						xlink:href="#dev1"
-					/>
-					<animate
 						attributeName="opacity"
 						begin="indefinite"
 						calcMode="spline"
@@ -203,43 +191,10 @@
 						xlink:href="#dev1"
 					/>
 
-					<!-- branch dev1 -->
-					<animate
-						attributeName="opacity"
-						begin="indefinite"
-						calcMode="spline"
-						dur="200ms"
-						fill="freeze"
-						from="0"
-						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
-						to="1"
-						xlink:href="#branch-dev1"
 					/>
 
 					<!-- dev2 -->
 					<animate
-						attributeName="y"
-						begin="indefinite"
-						calcMode="spline"
-						dur="200ms"
-						fill="freeze"
-						from="200"
-						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
-						to="250"
-						xlink:href="#dev2"
-					/>
-					<animate
-						attributeName="x"
-						begin="indefinite"
-						calcMode="spline"
-						dur="200ms"
-						fill="freeze"
-						from="100"
-						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
-						to="150"
-						xlink:href="#dev2"
-					/>
-					<animate
 						attributeName="opacity"
 						begin="indefinite"
 						calcMode="spline"
@@ -249,35 +204,11 @@
 						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
 						to="1"
 						xlink:href="#dev2"
-					/>
-
-					<!-- branch dev2 -->
-					<animate
-						attributeName="opacity"
-						begin="indefinite"
-						calcMode="spline"
-						dur="200ms"
-						fill="freeze"
-						from="0"
-						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
-						to="1"
-						xlink:href="#branch-dev2"
 					/>
 				</g>
 				<g id="step-3">
 
 					<!-- master-dev1 -->
-					<animate
-						attributeName="y"
-						begin="indefinite"
-						calcMode="spline"
-						dur="200ms"
-						fill="freeze"
-						from="200"
-						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
-						to="300"
-						xlink:href="#master-dev1"
-					/>
 					<animate
 						attributeName="opacity"
 						begin="indefinite"
@@ -302,20 +233,24 @@
 						to="1"
 						xlink:href="#branch-merge-dev1"
 					/>
+				</g>
 
-					<!-- branch master -->
+				<g id="step-4">
+
+					<!-- master-dev2 -->
 					<animate
-						attributeName="y2"
+						attributeName="opacity"
 						begin="indefinite"
 						calcMode="spline"
 						dur="200ms"
 						fill="freeze"
-						from="150"
+						from="0"
 						keySplines="0.445, 0.05, 0.55, 0.95; 0.445, 0.05, 0.55, 0.95"
-						to="250"
-						xlink:href="#branch-master"
+						to="1"
+						xlink:href="#master-dev2"
 					/>
 				</g>
+
 			</svg>
 		</div>
 	</section>
@@ -326,7 +261,7 @@
 	<i class="Repo--master"></i>
 	<i class="Repo--feature"></i>
 	<i class="Repo--hotfix"></i>
-	<i class="Repo--release"></i> -->
+	<i class="Repo--release"></i>
 	<!-- scripts -->
 	<script src="static/js/slideController.js"></script>
 	<script>WebFontConfig={google:{families:["Open+Sans:400,300,700:latin"]}},function(){var t=document.createElement("script");t.src=("https:"==document.location.protocol?"https":"http")+"://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js",t.type="text/javascript",t.async="true";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();</script>
